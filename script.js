@@ -28,7 +28,7 @@ function setColor() {
 }
 
 //определяет тон цвета текста и меняет его цвет
-function setTextColor(text, color) {   asdas
+function setTextColor(text, color) {   
     const luminance = chroma(color).luminance();
     text.style.color = luminance > 0.5 ? "black" : "white";
 }
