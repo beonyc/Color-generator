@@ -1,33 +1,34 @@
 *{margin: 0;padding: 0;}
 
-.colors-frame{
-    display: flex;
-    height: 30rem;
-    text-align: center;
-    border: 1px solid black;
-    
-    
 
+.colors-frame{
+    
+    display: flex;
+    height: 25rem;
+    text-align: center;
+   
 }
 .color{
     color: white;
     width: 20%;
-    height: 100%;
+  
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-   
+    justify-content: space-around;   
 }
+
 .next-button{
-    width: max-content;
-    margin: 0 auto;
+border: 1px solid black;
+width: 40px;
+margin: 0 auto;
 font-size:30px;
 border: none;
 cursor: pointer;
 background: transparent;
-color: white;
-
-}
+color: white; 
+height:max-content ;
+ }
+ 
 .buttons{
     display: flex;
     justify-content: center;
@@ -42,4 +43,36 @@ color: white;
     cursor: pointer;
     padding: 5px 30px;
     margin: 10px 10px;
+}
+/*  new colors */
+.saved-colors{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+  
+ 
+}
+
+
+
+.new-colors{
+    display: flex;
+    
+    text-align: center;
+    height:11rem;
+    margin: 20px 10px;
+    border-radius: 30px;
+    
+}
+.current-color{
+    width: 5.5rem;
+}
+
+.current-color:nth-child(1){ border-radius: 30px 0 0 30px;}
+.current-color:nth-child(5){ border-radius: 0 30px 30px 0;}
+.new-colors  h2{
+    
+    font-size: 1.1rem;
 }
