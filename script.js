@@ -58,8 +58,16 @@ document.addEventListener('click', event => {
         let target = event.target.dataset.colorcopy;
         navigator.clipboard.writeText(target);
         
-        alert(`скопирован цвет ${target}`)
-
+        //появление уведомления о копировании цвета
+        let notification=document.querySelector(".colorNotification");
+        notification.textContent=`copied: ${target}`;
+        notification.style.padding="10px";
+        
+            notification.classList.add("animate");
+            setTimeout(constremoveAnimation=()=>{
+                notification.classList.remove("animate");
+            },2000);
+            
     }
 })
 
@@ -72,6 +80,7 @@ function nextColor(child) {
     let text1 = currentDiv.querySelector("h2");
     let button2 = currentDiv.querySelector("button");
     text1.textContent = randomColor;
+    text1.dataset.colorcopy=randomColor;
     setTextColor(text1, randomColor);
     setTextColor(button2, randomColor);
 
