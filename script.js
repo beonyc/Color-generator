@@ -23,6 +23,7 @@ function setColor() {
         const text = col.querySelector("h2");
         const button = col.querySelector("button");
         text.textContent = randomColor;
+        text.dataset.colorcopy = randomColor;
         setTextColor(text, randomColor);
         setTextColor(button, randomColor);
     }
@@ -49,6 +50,20 @@ document.addEventListener('click', event => {
 
 
 })
+
+//копирование цвета
+document.addEventListener('click', event => {
+    const press = event.target.dataset.press
+    if (press == "presstocopy") {
+        let target = event.target.dataset.colorcopy;
+        navigator.clipboard.writeText(target);
+        
+        alert(`скопирован цвет ${target}`)
+
+    }
+})
+
+
 
 function nextColor(child) {
     let currentDiv = child.parentNode;
@@ -92,8 +107,5 @@ function addClassToAllcolors() {
     });
 
 }
-
-
-
 
 

@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;}
 
 h2{
-   
+    cursor: pointer;
     width: max-content;
    margin: 0 auto;
    padding: 10px;
@@ -87,3 +87,12 @@ height:max-content ;
 }
 
 
+
+.current-color h2{
+    display: none;
+    
+}
+.current-color:hover h2{
+   display: flex;
+   cursor: pointer;
+}
